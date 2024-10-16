@@ -10,8 +10,8 @@ def generate_gaussian_mode(mean, variance, num_of_samples):
 def generate_class_data(num_of_modes, samples_per_mode):
     all_samples = []
     for _ in range(num_of_modes):
-        mean = np.random.uniform(-5, 5, 2)
-        variance = np.random.uniform(0.05, 0.2)
+        mean = np.random.uniform(-5, 5, 2) # center
+        variance = np.random.uniform(0.05, 0.2) # spread
         samples = generate_gaussian_mode(mean, variance, samples_per_mode)
         all_samples.append(samples)
     return np.vstack(all_samples)
